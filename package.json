@@ -1,0 +1,34 @@
+{
+  "name": "nova",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "generate": "bun src/generate-schedule.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "validate": "bun format:check && bun typecheck && bun lint"
+  },
+  "prettier": "@vercel/style-guide/prettier",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "effect": "^2.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "^1.0.1",
+    "@tsconfig/strictest": "^2.0.2",
+    "@types/bun": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "@vercel/style-guide": "^5.1.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  }
+}
